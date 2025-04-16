@@ -28,8 +28,8 @@ python run_with_mail_notify.py download 1234 ./attachments
 # 查看帮助
 python run_with_mail_notify.py -h
 
-🔐 邮箱配置
-设置环境变量 EMAIL_PASS 来存储邮箱授权码或密码
+## 🔐 邮箱配置
 ```bash
+# 设置环境变量 EMAIL_PASS 来存储邮箱授权码或密码
 export EMAIL_PASS="邮箱授权码"
 ```
