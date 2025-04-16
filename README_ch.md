@@ -30,8 +30,18 @@ python run_with_mail_notify.py -h
 ```
 
 ## 🔐 邮箱配置
-
+### 你需要在代码中设置以下参数来完成邮箱功能的启用
 ```bash
-# 设置环境变量 EMAIL_PASS 来存储邮箱授权码或密码
+# 发件人邮箱账户（企业邮箱或支持SMTP/IMAP的邮箱）
+smtp_server = "smtp.exmail.qq.com"         # 邮件发送服务器地址（SMTP）
+smtp_port = 465                            # SMTP端口（通常为465，SSL加密）
+imap_server = "imap.exmail.qq.com"         # 邮件接收服务器地址（IMAP）
+sender_email = "你的邮箱地址"                # 发件人邮箱
+sender_password = os.getenv("EMAIL_PASS")  # 从环境变量中读取邮箱授权码/密码
+receiver_email = "你的邮箱地址"              # 接收人邮箱地址
+```
+
+### 📌 建议使用环境变量 EMAIL_PASS 储存授权码，而不是将密码写入代码，提升安全性。
+```bash
 export EMAIL_PASS="邮箱授权码"
 ```
