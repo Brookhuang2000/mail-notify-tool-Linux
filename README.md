@@ -30,8 +30,18 @@ python run_with_mail_notify.py -h
 ```
 
 ## 🔐 Mail Configuration
-
+### You should also configure the following parameters in the script
 ```bash
-# Set your email authorization token via environment variable
+# Sender email account (your enterprise mailbox)
+smtp_server = "smtp.exmail.qq.com"           # SMTP server for sending emails
+smtp_port = 465                              # SMTP SSL port
+imap_server = "imap.exmail.qq.com"           # IMAP server for reading inbox
+sender_email = "your_email@example.com"      # Your email address
+sender_password = os.getenv("EMAIL_PASS")    # Read password from environment variable
+receiver_email = "your_email@example.com"    # Recipient email address
+```
+
+### 📌 Set your email authorization token via environment variable
+```bash
 export EMAIL_PASS="your_email_authorization_code"
 ```
