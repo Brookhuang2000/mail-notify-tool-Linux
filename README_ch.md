@@ -1,4 +1,4 @@
-# 命令行邮件助手
+# 邮件助手
 
 一个轻量级 Python 工具，适用于科研或服务器环境中，自动执行命令并通过邮件进行结果通知和日志传送。同时支持查看收件箱内容和下载附件。
 
@@ -27,8 +27,10 @@ python run_with_mail_notify.py download 1234 ./attachments
 
 # 查看帮助
 python run_with_mail_notify.py -h
+```
 
 ## 🔐 邮箱配置
+
 ```bash
 # 设置环境变量 EMAIL_PASS 来存储邮箱授权码或密码
 export EMAIL_PASS="邮箱授权码"
